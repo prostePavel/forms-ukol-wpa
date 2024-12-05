@@ -8,54 +8,93 @@
     <title>Registrace</title>
 </head>
 <body>
-<h3 style="text-align: center">Get started</h3>
+<h2 style="text-align: center">Get started</h2>
 
 <p style="color:gray; text-align: center">Create your account now</p>
 
 <br>
 <br>
 
-<div style="justify-items: center">
-    <form action="index.html" method="post">
-        <label for="Full_name">Full name:</label>
-        <input type="text" name="Full_name" id="Full_name" maxlength="50" required>
+<div>
+    <form style="display: flex;flex-direction: column; align-items: center;justify-content: center;flex-wrap: wrap;"
+          action="index.html" method="post">
+        <div style="display: flex;justify-content: center;align-items: center; flex-direction: column">
+            <label style="align-self: flex-start; color: dimgray" for="Full_name">Full name:</label>
+            <input style="height: 40px" type="text" name="Full_name" id="Full_name" maxlength="50" placeholder="Jan Novák" required>
+        </div>
 
         <br>
         <br>
 
-        <label for="Email">Email:</label>
-        <input type="email" name="Email" id="Email" placeholder="Jan.novak@gmail.com" required>
+        <div style="display: flex;justify-content: center;align-items: center; flex-direction: column">
+            <label style="align-self: flex-start; color: dimgray" for="Email">Email:</label>
+            <input style="height: 40px" type="email" name="Email" id="Email" placeholder="Jan.novak@gmail.com" required>
+        </div>
 
         <br>
         <br>
 
-        <label for="Password">Password:</label>
-        <input type="password" name="Password" id="Password" minlength="8" required>
+        <div style="display: flex;justify-content: center;align-items: center; flex-direction: column">
+            <label style="align-self: flex-start; color: dimgray" for="Password">Password:</label>
+            <input style="height: 40px" type="password" name="Password" id="Password" minlength="8" required>
+        </div>
 
         <br>
         <br>
 
-        <label for="Confirm_password">Confirm password:</label>
-        <input type="password" name="Confirm_password" id="Confirm_password">
+        <div style="display: flex;justify-content: center;align-items: center; flex-direction: column">
+            <label style="align-self: flex-start; color: dimgray" for="Confirm_password">Confirm password:</label>
+            <input style="height: 40px" type="password" name="Confirm_password" id="Confirm_password" required>
+        </div>
 
         <br>
         <br>
 
-        <label for="Years">Years:</label>
-        <input type="number" name="Years" id="Years">
+        <div style="display: flex;justify-content: center;align-items: center; flex-direction: column">
+            <label style="align-self: flex-start; color: dimgray" for="Age">Age:</label>
+            <input style="height: 40px" type="number" name="Age" id="Age" placeholder="18" min="13" required>
 
         <br>
         <br>
 
-        <label for="Date">Favorite day:</label>
-        <input type="date" name="Date" id="Date">
+            <label style="align-self: flex-start; color: dimgray" for="Favorite_day">Favorite day:</label>
+            <select style="align-self: flex-start; height: 40px" name="Favorite_day" id="Favorite_day">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+        </div>
+
 
         <br>
         <br>
 
-        <input type="submit" value="Submit">
-        <button onclick="alert('You cant login')">Login</button>
+        <input style="align-self: center; background-color: royalblue; color: lightgray; border-radius: 5px; width: 185px; height: 40px; border: none"
+               type="submit" value="Sign Up">
+
+        <br>
+        <br>
+
+        <div>
+            <label for="checkbox">I agree with terms of service</label>
+            <input type="checkbox" name="checkbox" id="checkbox" required>
+        </div>
+
+        <br>
+        <br>
+
+        <div style="display: flex;align-items: center; flex-direction: row; gap: 5px;">
+            <p>If you already have an account</p>
+            <a style="text-decoration: none; color:blue" href="" onclick="alert('You cant login')">Login</a>
+        </div>
     </form>
 </div>
+<br>
+<br>
+<br>
 </body>
 </html>
